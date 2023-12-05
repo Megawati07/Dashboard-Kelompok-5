@@ -1,8 +1,12 @@
+#---------------------------------library--------------------------------------#
 library(shiny)
-library(ggplot2)
 library(sjPlot)
 library(plotly)
+library(rhandsontable)
 library(tidyverse)
+library(epitools)
+
+#------------------------------------data--------------------------------------#
 # Data 1 : Sudarmaji (2004)
 a=26;b=35;c=19;d=35;
 Kelompok<-factor(c(rep(c("Kontrol"),a),rep(c("Terpapar"),b),
@@ -19,60 +23,99 @@ Perkembangan<-factor(c(rep(c("Tidak Sesuai"),a),rep(c("Sesuai"),c),
 Status_Gizi<-factor(rep(c("Tidak Normal","Normal"),c(a+b,c+d)),
                     levels=c("Tidak Normal","Normal"))
 Gizi<-data.frame(Status_Gizi,Perkembangan)
+colnames(Gizi)<-c("Status Gizi","Perkembangan")
 
+# Data 3 : Permatasari et al (2021)
+a=20;b=14;c=12;d=52;
+Inner_Child<-factor(c(rep(c("Terluka"),a),rep(c("Tidak Terluka"),c),
+                      rep(c("Terluka"),b),rep(c("Tidak Terluka"),d)),
+                    levels=c("Terluka","Tidak Terluka"))
+Keadaan_Keluarga<-factor(rep(c("Tidak Harmonis","Harmonis"),c(a+c,b+d)),
+                         levels=c("Tidak Harmonis","Harmonis"))
+InnerChild<-data.frame(Inner_Child,Keadaan_Keluarga)
+colnames(InnerChild)<-c("Inner Child","Keadaan Keluarga")
+
+# Data 4 : Saranani et al (2022)
+a=31;b=4;c=6;d=13;
+Dinamika_Kelompok<-factor(c(rep(c("T"),a),rep(c("S"),c),
+                            rep(c("T"),b),rep(c("S"),d)),
+                          levels=c("T","S"))
+Penerapan_Teknologi<-factor(rep(c("T","S"),c(a+c,b+d)),
+                            levels=c("T","S"))
+Tani<-data.frame(Dinamika_Kelompok,Penerapan_Teknologi)
+colnames(Tani)<-c("Dinamika Kelompok","Penerapan Teknologi")
+
+# Data 5 : Sawarko, S (2023)
+a=54;b=16;c=14;d=35;
+Frekuensi_Makan<-factor(c(rep(c("Gastritis"),a),rep(c("Tidak Gastritis"),c),
+                          rep(c("Gastritis"),b),rep(c("Tidak Gastritis"),d)),
+                        levels=c("Gastritis","Tidak Gastritis"))
+Kelompok<-factor(rep(c("Tidak Baik","Baik"),c(a+b,c+d)),
+                 levels=c("Tidak Baik","Baik"))
+Makan<-data.frame(Frekuensi_Makan,Kelompok)
+colnames(Makan)<-c("Frekuensi Makan","Kelompok")
+
+# Data 6 : Hidayati, et  al (2017)
+a=10;b=2;c=16;d=7;
+Klasifikasi_Trigliserida<-factor(c(rep(c("Normal"),a),rep(c("Tinggi"),c),
+                                   rep(c("Normal"),b),rep(c("Tinggi"),d)),
+                                 levels=c("Normal","Tinggi"))
+Asupan_Lemak<-factor(rep(c("Cukup","Lebih"),c(a+b,c+d)),
+                     levels=c("Cukup","Lebih"))
+Kesehatan<-data.frame(Klasifikasi_Trigliserida,Asupan_Lemak)
+colnames(Kesehatan)<-c("Klasifikasi Trigliserida","Asupan Lemak")
+
+
+#------------------------------------ui.R--------------------------------------#
 ui <- fluidPage(
   navbarPage(title = "Asosiasi Dua Peubah Kategorik",
              # Panel 1 : Khi Kuadrat           
              tabPanel("Khi Kuadrat",           
                       sidebarLayout(
                         sidebarPanel(
-                          # Input: Selector for choosing dataset ----
-                          selectInput(inputId = "dataset",
-                                      label = "Pilih Data : ",
-                                      choices = c("Konsumsi Ikan (Sudarmadji, 2004)",
-                                                  "Perkembangan Anak (Iswari et al, 2021)"))
+                          fluidRow(
+                            column(6,selectInput(inputId = "data_input",
+                                                 label = "Pilih Data : ",
+                                                 choices = c("Data Masukkan",
+                                                             "Data Contoh"))),
+                            column(6,selectInput(inputId = "dataset",
+                                                 label = "Pilih Data : ",
+                                                 choices = c("Konsumsi Ikan",
+                                                             "Perkembangan Anak",
+                                                             "Inner Child",
+                                                             "Teknologi Petani",
+                                                             "Frekuensi Makan",
+                                                             "Lemak")))),
+                          fluidRow(
+                            column(6,textInput("var_row", "Nama Peubah Baris :", "Contoh : Usia")),
+                            column(6,textInput("var_col", "Nama Peubah Kolom :", "Contoh : Pendapatan"))),
+                          fluidRow(
+                            column(6,textInput("col_name", "Kolom :", "Kat 1,Kat 2")),
+                            column(6,textInput("row_name", "Baris :", "Kat 1,Kat 2"))),
+                          br(),
+                          fluidRow(column(6,rHandsontableOutput("contingency_table"))),
+                          br(),
+                          fluidRow(column(12,selectInput(inputId = "output_test",label = "Pilih Hasil yang ingin ditampilkan : ",
+                                                         choices = c("Khi Kuadrat","Rasio Odd","Kejadian Relatif"))))
                         ),
                         mainPanel("Deskriptif Data",
                                   fluidRow(
-                                    column(4,htmlOutput("html")),  
-                                    column(8,plotlyOutput("plotbar"))
+                                    column(5,htmlOutput("html")),  
+                                    column(7,plotlyOutput("plotbar"))
+                                  ),
+                                  fluidRow(
+                                    column(7,rHandsontableOutput("chisq"))
+                                  ),
+                                  fluidRow(
+                                    column(7,rHandsontableOutput("risk"))
+                                  ),
+                                  fluidRow(
+                                    column(7,rHandsontableOutput("odd"))
                                   )
+                                  
                         )
                       )
              )
   )
 )
 
-server <- function(input, output) 
-{
-  # Return the requested dataset ----
-  datasetInput <- reactive({
-    switch(input$dataset,
-           "Konsumsi Ikan (Sudarmadji, 2004)" = mercury_fish,
-           "Perkembangan Anak (Iswari et al, 2021)" = Gizi)
-  })
-  output$html <- renderUI({
-    dataset <- datasetInput()
-    label <- colnames(dataset)
-    HTML(tab_xtab(var.row = dataset[,1], var.col = dataset[,2],
-                  var.labels = c(label[1], label[2]),
-                  title = "Ringkasan dan Hasil", 
-                  show.col.prc = TRUE,show.exp = TRUE)$knitr)
-  })
-  output$plotbar = renderPlotly({
-    dataset <- datasetInput()
-    label <- colnames(dataset)
-    dataset2 <- dataset %>% group_by(assign(label[1],dataset[,1]),assign(label[2],dataset[,2])) %>% 
-      summarise(Frekuensi=n()) %>% as.data.frame()
-    dataset2 <- data.frame(Kelompok=factor(unique(dataset[,2]),levels=levels(dataset[,2])),
-                           Ada=dataset2[dataset2$assign(label[1], dataset[, 1])=="Ada","Frekuensi"],
-                           Tidak=dataset2[dataset2$assign(label[1], dataset[, 1])=="Tidak","Frekuensi"])
-    label2 <- colnames(dataset2)
-    fig <- plot_ly(x = dataset2[,label2[1]], y = dataset2[,label2[2]], type = 'bar', name = label2[2])
-    fig <- fig %>% add_trace(y = dataset2[label2[3]], name = label2[3])
-    fig <- fig %>% layout(yaxis = list(title = 'Frekuensi'), barmode = 'group')
-  })
-}
-
-
-shinyApp(ui, server)
