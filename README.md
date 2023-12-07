@@ -6,16 +6,13 @@
 [Demo](#dvd-demo)
 •
 [Dokumentasi](#blue_book-dokumentasi)
+•
+[Sumber Data](#heavy_check_mark-deskripsi-data)
+•
+[Tim Pengembang](#smiley_cat-tim-pengembang)
+•
 
 </div>
-
-## :bookmark_tabs: Menu
-
-- [Tentang](#scroll-tentang)
-- [Demo](#dvd-demo)
-- [Dokumentasi](#blue_book-dokumentasi)
-- [Sumber Data](#heavy_check_mark-deskripsi-data)
-- [Tim Pengembang](#smiley_cat-tim-pengembang)
 
 ## :scroll: Tentang
 
@@ -29,9 +26,7 @@ Dokumentasi penggunaan aplikasi database. Anda dapat juga membuat dokumentasi li
 
 ## :exclamation: Requirements
 
-- Scrapping data menggunakan package R yaitu `rvest` dengan pendukung package lainnya seperti `tidyverse`,`rio`,`kableExtra` dan `stingr`  
-- RDBMS yang digunakan adalah PostgreSQL dan ElephantSQL
-- Dashboard menggunakan `shinny`, `shinnythemes`, `bs4Dash`, `DT`, dan `dplyr` dari package R
+Jelaskan package yang dipakai
 
 ## :heavy_check_mark: Sumber Data
 1. Ulyasniati, D. (2022). Hubungan Antara Dinamika Kelompok Tani dan Tingkat Penerapan Teknologi Usaha Komoditas Kakao di Kecamatan Onembute Kabupaten Konawe. ULIL ALBAB : Jurnal Ilmiah Multidisiplin, 1(2), 174–185.
