@@ -5,7 +5,6 @@ library(plotly)
 library(rhandsontable)
 library(tidyverse)
 library(epitools)
-
 #------------------------------------data--------------------------------------#
 # Data 1 : Sudarmaji (2004)
 a=26;b=35;c=19;d=35;
@@ -76,7 +75,7 @@ ui <- fluidPage(
                           fluidRow(
                             column(6,selectInput(inputId = "data_input",
                                                  label = "Pilih Data : ",
-                                                 choices = c("Data Masukkan",
+                                                 choices = c("Isi Data",
                                                              "Data Contoh"))),
                             column(6,selectInput(inputId = "dataset",
                                                  label = "Pilih Data : ",
@@ -96,7 +95,12 @@ ui <- fluidPage(
                           fluidRow(column(6,rHandsontableOutput("contingency_table"))),
                           br(),
                           fluidRow(column(12,selectInput(inputId = "output_test",label = "Pilih Hasil yang ingin ditampilkan : ",
-                                                         choices = c("Khi Kuadrat","Rasio Odd","Kejadian Relatif"))))
+                                                         choices = c("Khi Kuadrat","Rasio Odd","Resiko Relatif")))),
+                          h5(""),
+                          checkboxInput(inputId = "obs", label = HTML('Tampilkan Nilai <span style="color: #5703ff; font-weight: bold;">Observasi</span>')),
+                          checkboxInput(inputId = "exp", label = "Tampilkan Nilai Harapan"),
+                          checkboxInput(inputId = "row_per", label = "Tampilkan Persentase Baris"),
+                          checkboxInput(inputId = "col_per", label = "Tampilkan Persentase Kolom")
                         ),
                         mainPanel("Deskriptif Data",
                                   fluidRow(
@@ -105,17 +109,10 @@ ui <- fluidPage(
                                   ),
                                   fluidRow(
                                     column(7,rHandsontableOutput("chisq"))
-                                  ),
-                                  fluidRow(
-                                    column(7,rHandsontableOutput("risk"))
-                                  ),
-                                  fluidRow(
-                                    column(7,rHandsontableOutput("odd"))
-                                  )
+                                  ),br(),br()
                                   
                         )
                       )
              )
   )
 )
-
