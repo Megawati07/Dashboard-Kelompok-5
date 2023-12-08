@@ -60,7 +60,7 @@ Dosen Pengampu :
 1. Dr. Ir. Erfiani, M.Si
 2. Gerry Alfa Dito, M.Si
 3. Alfa Nugraha Pradana, S.Komp
-Kelompok Mahasiswa
+Kelompok Mahasiswa :
 1. L.M Risman Dwi Jumansyah S.Stat (G1501222058)
 2. Megawati, S.Si (G1501221026
 3. Ainun Salsabila, S.Stat (G1501222038)
