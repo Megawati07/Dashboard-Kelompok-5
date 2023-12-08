@@ -15,6 +15,25 @@
 </div>
 
 ## :scroll: Tentang
+Asosiasi dua variabel kategorik adalah hubungan antara dua variabel yang masing-masing memiliki dua atau lebih kategori. Hubungan ini dapat berupa hubungan searah, berlawanan arah, atau tidak berhubungan sama sekali.
+
+Untuk menguji ada atau tidaknya asosiasi antara dua variabel kategorik, dapat dilakukan dengan menggunakan uji statistik, seperti uji chi-square. Uji chi-square digunakan untuk menguji apakah frekuensi observasi pada tabel kontingensi berbeda secara signifikan dari frekuensi harapan.
+
+Jika hasil uji chi-square signifikan, maka dapat disimpulkan bahwa terdapat asosiasi antara dua variabel kategorik tersebut. Untuk mengukur kekuatan asosiasi tersebut, dapat digunakan berbagai ukuran asosiasi, seperti odds ratio, relative risk, atau koefisien gamma.
+
+Berikut adalah beberapa contoh asosiasi antara dua variabel kategorik:
+
+* Hubungan antara jenis kelamin dan pekerjaan.
+* Hubungan antara tingkat pendidikan dan penghasilan.
+* Hubungan antara ras dan tingkat kriminalitas.
+
+Berikut adalah beberapa ukuran asosiasi yang dapat digunakan untuk mengukur asosiasi antara dua variabel kategorik:
+
+* **Odds ratio** (OR) adalah ukuran asosiasi yang mengukur perbandingan peluang terjadinya suatu kejadian pada satu kelompok dengan peluang terjadinya kejadian tersebut pada kelompok lain.
+* **Relative risk** (RR) adalah ukuran asosiasi yang mengukur perbandingan risiko terjadinya suatu kejadian pada satu kelompok dengan risiko terjadinya kejadian tersebut pada kelompok lain.
+* **Koefisien gamma** (γ) adalah ukuran asosiasi yang mengukur kekuatan hubungan antara dua variabel kategorik.
+
+Ukuran asosiasi yang digunakan akan tergantung pada jenis asosiasi yang ingin diukur.
 
 ## :dvd: Demo
 
@@ -22,7 +41,6 @@ Berikut merupakan link untuk shinnyapps atau dashboard dari project kami:
 
 ## :blue_book: Dokumentasi 
 
-Dokumentasi penggunaan aplikasi database. Anda dapat juga membuat dokumentasi lives menggunakan readthedocs.org (opsional).
 
 ## :exclamation: Requirements
 
@@ -38,6 +56,14 @@ Jelaskan package yang dipakai
 
 
 ## :smiley_cat: Tim Pengembang
+Dosen Pengampu :
+1. Dr. Ir. Erfiani, M.Si
+2. Gerry Alfa Dito, M.Si
+3. Alfa Nugraha Pradana, S.Komp
+Kelompok Mahasiswa
+1. L.M Risman Dwi Jumansyah S.Stat (G1501222058)
+2. Megawati, S.Si (G1501221026
+3. Ainun Salsabila, S.Stat (G1501222038)
 
 
 
