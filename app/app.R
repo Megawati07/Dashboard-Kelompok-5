@@ -75,17 +75,6 @@ Peubah_2<-factor(rep(c("Kat 1","Kat 2"),c(a+b,c+d)),
 manual<-data.frame(Peubah_1,Peubah_2)
 colnames(manual)<-c("Peubah Baris","Peubah Kolom")
 
-colInput <- function(vecFeats) { # vecFeats = vector of feature names for colors
-  pickers <- invisible(lapply(1:length(vecFeats), function(k) {
-    colourInput(inputId = paste0("col", k),           # names used in plot_ly()
-                label = vecFeats[k],                  # color sel label for user
-                value = defCol[k],    # initial color == this should match initial plot
-                showColour = "background"  # to user, only show the color itself after select
-    )
-  }))
-  pickers
-}
-
 # User Interface Dashboard Asosiasi Dua Peubah Kategorik
 ui <- fluidPage(
   # Menghilangkan Pesan Error pada Proses Memuat Dashboard
