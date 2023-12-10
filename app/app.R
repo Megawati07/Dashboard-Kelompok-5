@@ -7,6 +7,19 @@ library(epitools)
 library(markdown)
 library(colourpicker)
 library(knitr)
+library(httr)
+
+# Fungsi untuk mengunduh konten Markdown dari GitHub
+getMarkdownContent <- function(url) {
+  response <- httr::GET(url)
+  stop_for_status(response)
+  content <- httr::content(response, "text")
+  return(content)
+}
+# URL GitHub ke file Markdown
+github_url <- "https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/information.Rmd"
+# Mengunduh konten Markdown
+markdown_content <- getMarkdownContent(github_url)
 
 # Data 1 : Sudarmaji (2004)
 mercury_fish<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/mercury_fish.rds")))
@@ -45,7 +58,7 @@ ui <- fluidPage(
              tabsetPanel(
                # Tab Informasi berisi Penjelasan tentang Asosiasi Dua Peubah Kategorik
                tabPanel("Informasi",
-                        withMathJax(includeMarkdown("https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/information.Rmd"))),
+                        withMathJax(includeMarkdown(markdown_content))),
                # Tab Asosiasi Dua Peubah Kategorik dengan menggunakan metode Chi Square 
                tabPanel("Analisa",           
                         sidebarLayout(
