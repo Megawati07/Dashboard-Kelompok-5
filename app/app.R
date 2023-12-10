@@ -9,63 +9,17 @@ library(colourpicker)
 library(knitr)
 
 # Data 1 : Sudarmaji (2004)
-a=26;b=35;c=19;d=35;
-Kelompok<-factor(c(rep(c("Kontrol"),a),rep(c("Terpapar"),b),
-                   rep(c("Kontrol"),c),rep(c("Terpapar"),d)),
-                 levels=c("Kontrol","Terpapar"))
-Keluhan<-factor(rep(c("Tidak","Ada"),c(a+b,c+d)),levels=c("Tidak","Ada"))
-mercury_fish<-data.frame(Keluhan,Kelompok)
-
+mercury_fish<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/mercury_fish.rds")))
 # Data 2 : Iswari et al (2021)
-a=18;b=49;c=32;d=135;
-Perkembangan<-factor(c(rep(c("Tidak Sesuai"),a),rep(c("Sesuai"),b),
-                       rep(c("Tidak Sesuai"),c),rep(c("Sesuai"),d)),
-                     levels=c("Tidak Sesuai","Sesuai"))
-Status_Gizi<-factor(rep(c("Tidak Normal","Normal"),c(a+b,c+d)),
-                    levels=c("Tidak Normal","Normal"))
-Gizi<-data.frame(Status_Gizi,Perkembangan)
-colnames(Gizi)<-c("Status Gizi","Perkembangan")
-
+Gizi<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/Gizi.rds")))
 # Data 3 : Permatasari et al (2021)
-a=20;b=12;c=14;d=52;
-Inner_Child<-factor(c(rep(c("Terluka"),a),rep(c("Tidak Terluka"),b),
-                      rep(c("Terluka"),c),rep(c("Tidak Terluka"),d)),
-                    levels=c("Terluka","Tidak Terluka"))
-Keadaan_Keluarga<-factor(rep(c("Tidak Harmonis","Harmonis"),c(a+b,c+d)),
-                         levels=c("Tidak Harmonis","Harmonis"))
-InnerChild<-data.frame(Inner_Child,Keadaan_Keluarga)
-colnames(InnerChild)<-c("Inner Child","Keadaan Keluarga")
-
+InnerChild<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/InnerChild.rds")))
 # Data 4 : Saranani et al (2022)
-a=6;b=31;c=13;d=4;
-Dinamika_Kelompok<-factor(c(rep(c("Sedang"),a),rep(c("Tinggi"),b),
-                            rep(c("Sedang"),c),rep(c("Tinggi"),d)),
-                          levels=c("Sedang","Tinggi"))
-Penerapan_Teknologi<-factor(rep(c("Sedang","Tinggi"),c(a+b,c+d)),
-                            levels=c("Sedang","Tinggi"))
-Tani<-data.frame(Dinamika_Kelompok,Penerapan_Teknologi)
-colnames(Tani)<-c("Dinamika Kelompok","Penerapan Teknologi")
-
+Tani<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/Tani.rds")))
 # Data 5 : Sawarko, S (2023)
-a=54;b=16;c=14;d=35;
-Kejadian<-factor(c(rep(c("Gastritis"),a),rep(c("Tidak Gastritis"),b),
-                   rep(c("Gastritis"),c),rep(c("Tidak Gastritis"),d)),
-                 levels=c("Tidak Gastritis","Gastritis"))
-Frekuensi_Makan<-factor(rep(c("Tidak Baik","Baik"),c(a+b,c+d)),
-                        levels=c("Tidak Baik","Baik"))
-Makan<-data.frame(Frekuensi_Makan,Kejadian)
-colnames(Makan)<-c("Frekuensi Makan","Kejadian")
-
+Makan<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/Makan.rds")))
 # Data 6 : Hidayati, et  al (2017)
-a=10;b=2;c=16;d=7;
-Klasifikasi_Trigliserida<-factor(c(rep(c("Normal"),a),rep(c("Tinggi"),b),
-                                   rep(c("Normal"),c),rep(c("Tinggi"),d)),
-                                 levels=c("Normal","Tinggi"))
-Asupan_Lemak<-factor(rep(c("Cukup","Lebih"),c(a+b,c+d)),
-                     levels=c("Cukup","Lebih"))
-Kesehatan<-data.frame(Asupan_Lemak,Klasifikasi_Trigliserida)
-colnames(Kesehatan)<-c("Asupan Lemak","Klasifikasi Trigliserida")
-
+Kesehatan<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/Makan.rds")))
 # Data Isi Sendiri
 a=0;b=0;c=0;d=0;
 Peubah_1<-factor(c(rep(c("Kat 1"),a),rep(c("Kat 2"),b),
