@@ -1,5 +1,5 @@
 ---
-title: "Data Asosiaso Dua Peubah Kategorik"
+title: "Data Asosiasi Dua Peubah Kategorik"
 author: "Risman, Mega, Ainun"
 date: "2023-12-10"
 output: 
@@ -8,15 +8,18 @@ output:
     toc: true
     toc_float: true
 ---
-## Data 1
+
+## Data 1 : `Konsumsi Ikan`
+
 ### Judul Artikel
+
 Hubungan Tingkat Konsumsi Ikan Laut Terhadap Kadar Mercury dalam Rambut dan Kesehatan Nelayan di Pantai Kenjeran Surabaya
 
 ### Deskripsi Data
-- Artikel ini menggunakan data kadar merkuri (Hg) dalam sampel rambut dari berbagai populasi di lokasi yang berbeda, termasuk Kupang di Muara Pantai Timur Surabaya, Desa Tangkiling di Kecamatan Bukit Batu Palangkaraya, dan nelayan di Yogyakarta dan Surabaya.
-- Studi ini juga mencakup data tentang usia subjek dan hubungannya dengan kadar merkuri pada rambut, tidak menemukan korelasi yang signifikan.
-- Selain itu, artikel ini menyebutkan data tentang efek kesehatan yang dialami oleh subjek, seperti gangguan hati, masalah penglihatan, sakit kepala, tremor, dan gusi berdarah. Namun, ia mencatat bahwa gejala-gejala ini mungkin tidak secara khusus disebabkan oleh keracunan merkuri dan dapat dikaitkan dengan penyakit lain atau logam berat.
-(Sutomo & Suwarni, 2004)
+
+-   Artikel ini menggunakan data kadar merkuri (Hg) dalam sampel rambut dari berbagai populasi di lokasi yang berbeda, termasuk Kupang di Muara Pantai Timur Surabaya, Desa Tangkiling di Kecamatan Bukit Batu Palangkaraya, dan nelayan di Yogyakarta dan Surabaya.
+-   Studi ini juga mencakup data tentang usia subjek dan hubungannya dengan kadar merkuri pada rambut, tidak menemukan korelasi yang signifikan.
+-   Selain itu, artikel ini menyebutkan data tentang efek kesehatan yang dialami oleh subjek, seperti gangguan hati, masalah penglihatan, sakit kepala, tremor, dan gusi berdarah. Namun, ia mencatat bahwa gejala-gejala ini mungkin tidak secara khusus disebabkan oleh keracunan merkuri dan dapat dikaitkan dengan penyakit lain atau logam berat. (Sutomo & Suwarni, 2004)
 
 ### Data
 
@@ -30,19 +33,17 @@ mercury_fish<-data.frame(Keluhan,Kelompok)
 ```
 
 ### Referensi
-Sutomo, A. H., & Suwarni, A. (2004). Kadar Mercury Dalam Rambut Dan Kesehatan Nelayan Di Pantai Kenjeran Surabaya. Journal Teknik Lingkungan P3TL-BPPT, 5(1), 17–24.
 
+Sutomo, A. H., & Suwarni, A. (2004). Kadar Mercury Dalam Rambut Dan Kesehatan Nelayan Di Pantai Kenjeran Surabaya. Journal Teknik Lingkungan P3TL-BPPT, 5(1), 17--24.
 
-## Data 2
+## Data 2 : `Perkembangan Anak`
+
 ### Judul Artikel
-Hubungan Status Gizi dan Perkembangan Anak Umur 0-24 Bulan (Baduta) di Kabupaten Karawang
-### Deskripsi Data
-- Artikel ini menggunakan perkiraan prevalensi nasional, regional, dan global yang diperoleh melalui pemodelan prediktif untuk menilai status perkembangan anak usia dini di negara-negara berpenghasilan rendah dan menengah. Program Lady Health Worker di Pakistan dievaluasi menggunakan uji efektivitas faktorial cluster-randomized untuk menguji efek stimulasi responsif terpadu dan intervensi nutrisi pada perkembangan, pertumbuhan, dan hasil kesehatan anak.
-- Hubungan antara status gizi dengan perkembangan anak usia 1-3 tahun dieksplorasi dalam penelitian yang dilakukan di daerah Puskesmas Jetis Kota Yogyakarta.
-- Hubungan antara status gizi, perkembangan kognitif, dan perkembangan motorik pada anak prasekolah diteliti dalam penelitian pada anak usia prasekolah.
-(Forikes, 2021)
+
+Hubungan Status Gizi dan Perkembangan Anak Umur 0-24 Bulan (Baduta) di Kabupaten Karawang \### Deskripsi Data - Artikel ini menggunakan perkiraan prevalensi nasional, regional, dan global yang diperoleh melalui pemodelan prediktif untuk menilai status perkembangan anak usia dini di negara-negara berpenghasilan rendah dan menengah. Program Lady Health Worker di Pakistan dievaluasi menggunakan uji efektivitas faktorial cluster-randomized untuk menguji efek stimulasi responsif terpadu dan intervensi nutrisi pada perkembangan, pertumbuhan, dan hasil kesehatan anak. - Hubungan antara status gizi dengan perkembangan anak usia 1-3 tahun dieksplorasi dalam penelitian yang dilakukan di daerah Puskesmas Jetis Kota Yogyakarta. - Hubungan antara status gizi, perkembangan kognitif, dan perkembangan motorik pada anak prasekolah diteliti dalam penelitian pada anak usia prasekolah. (Forikes, 2021)
 
 ### Data
+
 ```{r}
 a=18;b=49;c=32;d=135;
 Perkembangan<-factor(c(rep(c("Tidak Sesuai"),a),rep(c("Sesuai"),b),
@@ -54,19 +55,18 @@ Gizi<-data.frame(Status_Gizi,Perkembangan)
 colnames(Gizi)<-c("Status Gizi","Perkembangan")
 ```
 
-
 ### Referensi
-Forikes, T. S. (2021). 1053-4033-1-Pb. 12(2), 48–52.
 
-## Data 3
+Forikes, T. S. (2021). 1053-4033-1-Pb. 12(2), 48--52.
+
+## Data 3 : `Inner Child`
+
 ### Judul Artikel
-Hubungan Asosoasi Antara Inner Child dengan Keharmonisan Keluarga: Pendekatan Menggunakan Uji Chi-Square (Uji Kebebasan)
-### Deskripsi Data
-- Data yang digunakan dalam artikel ini terdiri dari dua variabel, yang diubah dari data kontinu menjadi data diskrit. Variabel diskrit dikategorikan atau dibedakan data, yang dikenal sebagai data nominal atau dikotomis. Misalnya, data dikotomi 1 untuk kategori yang benar dan 0 untuk kategori yang salah.
-- Penelitian ini menggunakan metode survei dan mengumpulkan data melalui Google Formulir, menggunakan pertanyaan yang disiapkan sebagai bahan pengumpulan data.
-(Permatasari et al., 2023)
+
+Hubungan Asosoasi Antara Inner Child dengan Keharmonisan Keluarga: Pendekatan Menggunakan Uji Chi-Square (Uji Kebebasan) \### Deskripsi Data - Data yang digunakan dalam artikel ini terdiri dari dua variabel, yang diubah dari data kontinu menjadi data diskrit. Variabel diskrit dikategorikan atau dibedakan data, yang dikenal sebagai data nominal atau dikotomis. Misalnya, data dikotomi 1 untuk kategori yang benar dan 0 untuk kategori yang salah. - Penelitian ini menggunakan metode survei dan mengumpulkan data melalui Google Formulir, menggunakan pertanyaan yang disiapkan sebagai bahan pengumpulan data. (Permatasari et al., 2023)
 
 ### Data
+
 ```{r}
 a=20;b=12;c=14;d=52;
 Inner_Child<-factor(c(rep(c("Terluka"),a),rep(c("Tidak Terluka"),b),
@@ -78,23 +78,25 @@ InnerChild<-data.frame(Inner_Child,Keadaan_Keluarga)
 colnames(InnerChild)<-c("Inner Child","Keadaan Keluarga")
 ```
 
-
 ### Referensi
-Permatasari, N. D., Fajar, A., Nurhaeni, S., Rahmawati, M., & Ramdhani, P. (2023). Hubungan Asosiasi Antara Inner Child Dengan Keharmonisan Keluarga: Pendekatan Menggunakan Uji Chi-Square ( Uji Kebebasan ). 3, 5339–5349.
 
+Permatasari, N. D., Fajar, A., Nurhaeni, S., Rahmawati, M., & Ramdhani, P. (2023). Hubungan Asosiasi Antara Inner Child Dengan Keharmonisan Keluarga: Pendekatan Menggunakan Uji Chi-Square ( Uji Kebebasan ). 3, 5339--5349.
 
-## Data 4
+## Data 4 : `Teknologi Petani`
+
 ### Judul Artikel
+
 Hubungan Antara Dinamika Kelompok Tani dan Tingat Penerapan Teknologi Usaha Komoditas Kakao di Kecamatan Onembute Kabupaten Konawe
 
 ### Deskripsi Data
-- Artikel ini menggunakan data yang terkait dengan koefisien kontingensi, X2, dan derajat kebebasan (df) untuk menganalisis hubungan antara dinamika kelompok dan implementasi teknologi.
-- Artikel ini juga menyebutkan data tentang konsep kelompok tani, termasuk ukuran keanggotaan mereka dan dasar pembentukannya.
-- Selain itu,artikel ini mengacu pada data klasifikasi kelompok tani berdasarkan kemampuan dan kompetensinya, seperti perencanaan, pengorganisasian, pelaksanaan, pengendalian, dan pelaporan.
-- Artikel ini mencakup data tentang skor dan persentase berbagai indikator implementasi teknologi, seperti pembibitan, pengolahan lahan, pemupukan, pengendalian hama, dan pengaturan jarak tanam.
-(Saranani & Ulyasniati, 2022)
+
+-   Artikel ini menggunakan data yang terkait dengan koefisien kontingensi, X2, dan derajat kebebasan (df) untuk menganalisis hubungan antara dinamika kelompok dan implementasi teknologi.
+-   Artikel ini juga menyebutkan data tentang konsep kelompok tani, termasuk ukuran keanggotaan mereka dan dasar pembentukannya.
+-   Selain itu,artikel ini mengacu pada data klasifikasi kelompok tani berdasarkan kemampuan dan kompetensinya, seperti perencanaan, pengorganisasian, pelaksanaan, pengendalian, dan pelaporan.
+-   Artikel ini mencakup data tentang skor dan persentase berbagai indikator implementasi teknologi, seperti pembibitan, pengolahan lahan, pemupukan, pengendalian hama, dan pengaturan jarak tanam. (Saranani & Ulyasniati, 2022)
 
 ### Data
+
 ```{r}
 a=6;b=31;c=13;d=4;
 Dinamika_Kelompok<-factor(c(rep(c("Sedang"),a),rep(c("Tinggi"),b),
@@ -107,18 +109,21 @@ colnames(Tani)<-c("Dinamika Kelompok","Penerapan Teknologi")
 ```
 
 ### Referensi
-Saranani, M., & Ulyasniati. (2022). Hubungan antara dinamika kelompok tani dengan tingkat penerapan teknologi pada usaha tani kakao di desa silea kecamatan onembute kabupaten konawe. Jurnal Ilmiah Multidisiplin, 1(2), 174–185.
 
+Saranani, M., & Ulyasniati. (2022). Hubungan antara dinamika kelompok tani dengan tingkat penerapan teknologi pada usaha tani kakao di desa silea kecamatan onembute kabupaten konawe. Jurnal Ilmiah Multidisiplin, 1(2), 174--185.
 
-## Data 5
+## Data 5 : `Frekuensi Makan`
+
 ### Judul Artikel
+
 Hubungan Antara Frekuensi Makan dan Jenis Makanan Dengan Kejadian Gastritis
 
 ### Deskripsi Data
-Artikel ini menggunakan data frekuensi makan dan jenis makanan yang dikonsumsi responden dalam kaitannya dengan terjadinya gastritis.
-(Sarwoko, 2023)
+
+Artikel ini menggunakan data frekuensi makan dan jenis makanan yang dikonsumsi responden dalam kaitannya dengan terjadinya gastritis. (Sarwoko, 2023)
 
 ### Data
+
 ```{r}
 a=54;b=16;c=14;d=35;
 Kejadian<-factor(c(rep(c("Gastritis"),a),rep(c("Tidak Gastritis"),b),
@@ -131,20 +136,23 @@ colnames(Makan)<-c("Frekuensi Makan","Kejadian")
 ```
 
 ### Referensi
-Sarwoko, S. (2023). Hubungan Antara Frekuensi Makan Dan Jenis Makanan Dengan Kejadian Gastritis. Cendekia Medika: Jurnal Stikes Al-Ma`arif Baturaja, 8(2), 386–392. https://doi.org/10.52235/cendekiamedika.v8i2.266
 
+Sarwoko, S. (2023). Hubungan Antara Frekuensi Makan Dan Jenis Makanan Dengan Kejadian Gastritis. Cendekia Medika: Jurnal Stikes Al-Ma\`arif Baturaja, 8(2), 386--392. <https://doi.org/10.52235/cendekiamedika.v8i2.266>
 
-## Data 6
+## Data 6 : `Lemak`
+
 ### Judul Artikel
+
 Hubungan Asupan Lemak Dengan Kadar Trigliserida Dan Indeks Massa Tubuh Sivitas Akademika UNY
 
-###	Deskripsi Data
-- Data penelitian ini dikumpulkan melalui kuesioner, pengukuran tinggi dan berat badan, serta asupan lemak dengan catatan makanan (3x24 jam).
-- Studi ini menganalisis hubungan antara asupan lemak, kadar trigliserida, dan BMI, serta faktor-faktor lain seperti usia, pendidikan, riwayat penyakit, aktivitas, dan perilaku kesehatan.
-- Studi ini tidak menemukan korelasi yang signifikan antara asupan lemak dan kadar trigliserida atau antara asupan lemak dan BMI.
-(Hidayati et al., 2017)
+### Deskripsi Data
 
-###	Data
+-   Data penelitian ini dikumpulkan melalui kuesioner, pengukuran tinggi dan berat badan, serta asupan lemak dengan catatan makanan (3x24 jam).
+-   Studi ini menganalisis hubungan antara asupan lemak, kadar trigliserida, dan BMI, serta faktor-faktor lain seperti usia, pendidikan, riwayat penyakit, aktivitas, dan perilaku kesehatan.
+-   Studi ini tidak menemukan korelasi yang signifikan antara asupan lemak dan kadar trigliserida atau antara asupan lemak dan BMI. (Hidayati et al., 2017)
+
+### Data
+
 ```{r}
 a=10;b=2;c=16;d=7;
 Klasifikasi_Trigliserida<-factor(c(rep(c("Normal"),a),rep(c("Tinggi"),b),
@@ -156,7 +164,6 @@ Kesehatan<-data.frame(Asupan_Lemak,Klasifikasi_Trigliserida)
 colnames(Kesehatan)<-c("Asupan Lemak","Klasifikasi Trigliserida")
 ```
 
+### Referensi
 
-### 	Referensi
-Hidayati, D. R., Yuliati, Y., & Pratiwi, K. R. (2017). Hubungan Asupan Lemak Dengan Kadar Trigliserida Dan Indeks Massa Tubuh Sivitas Akademika Uny. Kingdom (The Journal of Biological Studies), 6(1), 25–33. https://doi.org/10.21831/kingdom.v6i1.6055
-
+Hidayati, D. R., Yuliati, Y., & Pratiwi, K. R. (2017). Hubungan Asupan Lemak Dengan Kadar Trigliserida Dan Indeks Massa Tubuh Sivitas Akademika Uny. Kingdom (The Journal of Biological Studies), 6(1), 25--33. <https://doi.org/10.21831/kingdom.v6i1.6055>
