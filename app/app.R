@@ -92,7 +92,7 @@ ui <- fluidPage(
                tabPanel("Informasi",
                         withMathJax(includeMarkdown("https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/information.Rmd"))),
                # Tab Asosiasi Dua Peubah Kategorik dengan menggunakan metode Chi Square 
-               tabPanel("Khi Kuadrat",           
+               tabPanel("Analisa",           
                         sidebarLayout(
                           sidebarPanel(
                             # Memilih Data
