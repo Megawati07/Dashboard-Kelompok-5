@@ -9,7 +9,7 @@ output:
     toc_float: true
 ---
 
-### Data 1 : `Konsumsi Ikan`
+### **Data 1 : `Konsumsi Ikan`**
 
 #### Judul Artikel
 
@@ -36,7 +36,7 @@ mercury_fish<-data.frame(Keluhan,Kelompok)
 
 Sutomo, A. H., & Suwarni, A. (2004). Kadar Mercury Dalam Rambut Dan Kesehatan Nelayan Di Pantai Kenjeran Surabaya. Journal Teknik Lingkungan P3TL-BPPT, 5(1), 17--24.
 
-## Data 2 : `Perkembangan Anak`
+## **Data 2 : `Perkembangan Anak`**
 
 #### Judul Artikel
 
@@ -59,7 +59,7 @@ colnames(Gizi)<-c("Status Gizi","Perkembangan")
 
 Forikes, T. S. (2021). 1053-4033-1-Pb. 12(2), 48--52.
 
-### Data 3 : `Inner Child`
+### **Data 3 : `Inner Child`**
 
 #### Judul Artikel
 
@@ -82,7 +82,7 @@ colnames(InnerChild)<-c("Inner Child","Keadaan Keluarga")
 
 Permatasari, N. D., Fajar, A., Nurhaeni, S., Rahmawati, M., & Ramdhani, P. (2023). Hubungan Asosiasi Antara Inner Child Dengan Keharmonisan Keluarga: Pendekatan Menggunakan Uji Chi-Square ( Uji Kebebasan ). 3, 5339--5349.
 
-### Data 4 : `Teknologi Petani`
+### **Data 4 : `Teknologi Petani`**
 
 #### Judul Artikel
 
@@ -112,7 +112,7 @@ colnames(Tani)<-c("Dinamika Kelompok","Penerapan Teknologi")
 
 Saranani, M., & Ulyasniati. (2022). Hubungan antara dinamika kelompok tani dengan tingkat penerapan teknologi pada usaha tani kakao di desa silea kecamatan onembute kabupaten konawe. Jurnal Ilmiah Multidisiplin, 1(2), 174--185.
 
-### Data 5 : `Frekuensi Makan`
+### **Data 5 : `Frekuensi Makan`**
 
 #### Judul Artikel
 
@@ -139,7 +139,7 @@ colnames(Makan)<-c("Frekuensi Makan","Kejadian")
 
 Sarwoko, S. (2023). Hubungan Antara Frekuensi Makan Dan Jenis Makanan Dengan Kejadian Gastritis. Cendekia Medika: Jurnal Stikes Al-Ma\`arif Baturaja, 8(2), 386--392. <https://doi.org/10.52235/cendekiamedika.v8i2.266>
 
-### Data 6 : `Lemak`
+### **Data 6 : `Lemak`**
 
 #### Judul Artikel
 
