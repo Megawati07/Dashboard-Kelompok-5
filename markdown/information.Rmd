@@ -16,13 +16,13 @@ runtime: shiny
 
 -   Berikut adalah struktur dari tabel kontingensi: 
 
-<center><br>![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/struktur_tblkon.png)<br><center>
+<center>![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/struktur_tblkon.png)<center>
 
 -   Contoh tabel kontingensi:
 
     Terdapat dua variabel kategorik, yaitu variabel Kategori Karies dan Jenis Kelamin. Kategori Karies terdiri dari kategori Tidak Karies dan Karies, sedangkan Jenis Kelamin terdiri dari kategori Perempuan dan Laki-Laki.
     
-<center><br>![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/tabel_kontingensi2.png)<br><center>
+<center>![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/tabel_kontingensi2.png)<center>
 
     **Contoh cara membaca tabel kontingensi:** Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
 
