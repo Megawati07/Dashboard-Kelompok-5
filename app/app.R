@@ -8,6 +8,7 @@ library(markdown)
 library(colourpicker)
 library(knitr)
 
+# Data 1 : Sudarmaji (2004)
 a=26;b=35;c=19;d=35;
 Kelompok<-factor(c(rep(c("Kontrol"),a),rep(c("Terpapar"),b),
                    rep(c("Kontrol"),c),rep(c("Terpapar"),d)),
