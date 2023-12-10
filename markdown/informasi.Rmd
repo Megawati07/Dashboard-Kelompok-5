@@ -8,7 +8,7 @@ output:
 runtime: shiny
 ---
 
-### Tabel Kontingensi
+### **Tabel Kontingensi**
 
 -   Tabel kontingensi merupakan teknik penyusunan data dalam bentuk tabel $i$ baris x $j$ kolom, yang digunakan untuk mengukur hubungan antar variabel kategorik dalam tabel.
 
@@ -26,7 +26,7 @@ runtime: shiny
 
 **Contoh cara membaca tabel kontingensi:** Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
 
-### Uji Asosiasi dengan Khi-Kuadrat
+### **Uji Asosiasi dengan Khi-Kuadrat**
 
 -   Uji Khi Kuadrat adalah uji hipotesis mengenai perbandingan antara frekuensi yang benar terjadi dengan frekuensi harapan/ekspektasi.
 
@@ -40,7 +40,7 @@ runtime: shiny
 
 -   Keputusan Pengujian: Jika nilai **Khi-Kuadrat Hitung \> Khi-Kuadrat Tabel atau *p-value* \< α**, maka **Tolak H~0~**.
 
-### Rasio Odds
+### **Rasio Odds**
 
 -   Odds adalah peluang terjadinya suatu kejadian dibandingkan peluang tidak terjadinya kejadian.
 
@@ -56,7 +56,7 @@ runtime: shiny
 
 -   Rasio Odds \< 1, maka kemungkinan kejadian di kelompok kedua lebih besar (asosiasi negatif)
 
-### Resiko Relatif
+### **Resiko Relatif**
 
 -   Resiko relatif adalah perbandingan resiko kejadian dari dua kelompok atau perbandingan peluang sukses dari dua kelompok.
 
