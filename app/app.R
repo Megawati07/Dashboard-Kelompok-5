@@ -11,15 +11,17 @@ library(httr)
 
 # Fungsi untuk mengunduh konten Markdown dari GitHub
 getMarkdownContent <- function(url) {
-  response <- httr::GET(url)
+  response <- GET(url)
   stop_for_status(response)
-  content <- httr::content(response, "text")
+  content <- content(response, "text")
   return(content)
 }
 # URL GitHub ke file Markdown
-github_url <- "https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/information.Rmd"
+github_url_info <- "https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/informasi.Rmd"
+github_url_data <- "https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/datades.Rmd"
 # Mengunduh konten Markdown
-markdown_content <- getMarkdownContent(github_url)
+markdown_content1 <- getMarkdownContent(github_url_info)
+markdown_content2 <- getMarkdownContent(github_url_data)
 
 # Data 1 : Sudarmaji (2004)
 mercury_fish<-readRDS(gzcon(url("https://github.com/Megawati07/Dashboard-Kelompok-5/raw/main/data/mercury_fish.rds")))
@@ -58,7 +60,7 @@ ui <- fluidPage(
              tabsetPanel(
                # Tab Informasi berisi Penjelasan tentang Asosiasi Dua Peubah Kategorik
                tabPanel("Informasi",
-                        withMathJax(includeMarkdown(markdown_content))),
+                        withMathJax(includeMarkdown(markdown_content1))),
                # Tab Asosiasi Dua Peubah Kategorik dengan menggunakan metode Chi Square 
                tabPanel("Analisa",           
                         sidebarLayout(
@@ -121,11 +123,14 @@ ui <- fluidPage(
                                              conditionalPanel(
                                                condition = "input.output_test == 'Rasio Odd'", 
                                                column(12,offset = 3,rHandsontableOutput("odd")))
+                                            
                                              
-          )
+          ) 
         )
        )
-      )
+      ),
+      tabPanel("Tentang Data",
+               withMathJax(includeMarkdown(markdown_content2)))
     )
   )
 )
