@@ -1,0 +1,71 @@
+---
+title: "Informasi Asosiasi Dua Peubah Kategorik"
+output:
+  html_document:
+    theme: sandstone
+    toc: true
+    toc_float: true
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Tabel Kontingensi
+
+-   Tabel kontingensi merupakan teknik penyusunan data dalam bentuk tabel $i$ baris x $j$ kolom, yang digunakan untuk mengukur hubungan antar variabel kategorik dalam tabel.
+
+-   $i$ baris menyatakan kategori dari variabel A dan $j$ kolom menyatakan kategori dari variabel B.
+
+- Berikut adalah struktur dari tabel kontingensi:
+![](/Users/hasna/OneDrive/Pictures/struktur_tblkon.png)
+- Contoh tabel kontingensi:
+
+  Terdapat dua variabel kategorik, yaitu variabel Kategori   Karies dan Jenis   Kelamin. Kategori Karies terdiri dari   kategori Tidak Karies dan Karies,    sedangkan Jenis       Kelamin terdiri dari kategori Perempuan dan Laki-Laki.
+![](/Users/hasna/OneDrive/Pictures/tabel_kontingensi2.png)
+
+  **Contoh cara membaca tabel kontingensi:**
+Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
+
+### Uji Asosiasi dengan Khi-Kuadrat
+
+-   Uji Khi Kuadrat adalah uji hipotesis mengenai perbandingan antara frekuensi yang benar terjadi dengan frekuensi harapan/ekspektasi.
+
+-   Dapat digunakan untuk menguji ada tidaknya hubungan antar dua variabel kategorik.
+
+-   Hipotesis:
+
+    H~0~ : Tidak ada hubungan antar variabel
+
+    H~1~ : Ada hubungan antar variabel
+
+-   Keputusan Pengujian: Jika nilai **Khi-Kuadrat Hitung \> Khi-Kuadrat Tabel atau *p-value* \< α**, maka **Tolak H~0~**.
+
+### Rasio Odds
+
+-   Odds adalah peluang terjadinya suatu kejadian dibandingkan peluang tidak terjadinya kejadian.
+
+-   $Odds = \frac{p}{(1−𝑝)}$
+
+-   Rasio odds adalah perbandingan dari dua odds atau ukuran untuk mengetahui seberapa mungkin suatu kejadian terjadi di salah satu kelompok dibandingkan kelompok lain.
+
+-   Rasio Odds = (𝑜𝑑𝑑𝑠 𝑘𝑒𝑙𝑜𝑚𝑝𝑜𝑘 1) / (𝑜𝑑𝑑𝑠 𝑘𝑒𝑙𝑜𝑚𝑝𝑜𝑘 2)
+
+-   Rasio Odds = 1, maka tidak ada hubungan antara dua kelompok
+
+-   Rasio Odds \> 1, maka kemungkinan kejadian di kelompok pertama lebih besar (asosiasi positif)
+
+-   Rasio Odds \< 1, maka kemungkinan kejadian di kelompok kedua lebih besar (asosiasi negatif)
+
+### Resiko Relatif
+
+-   Resiko relatif adalah perbandingan resiko kejadian dari dua kelompok atau perbandingan peluang sukses dari dua kelompok.
+
+-   $RR = \frac{Peluang \ sukses \ kelompok \ 1} {𝑃𝑒𝑙𝑢𝑎𝑛𝑔 \ 𝑠𝑢𝑘𝑠s \ 𝑘𝑒𝑙𝑜𝑚𝑝𝑜k \ 2}$
+
+-   RR = 1, maka peluang sukses antar kelompok sama
+
+-   RR \> 1, maka peluang sukses untuk kelompok 1 lebih besar dibandingkan kelompok 2
+
+-   RR \< 1, maka peluang sukses untuk kelompok 1 lebih kecil dibandingkan kelompok 2
