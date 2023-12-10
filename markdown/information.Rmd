@@ -8,10 +8,6 @@ output:
 runtime: shiny
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ### Tabel Kontingensi
 
 -   Tabel kontingensi merupakan teknik penyusunan data dalam bentuk tabel $i$ baris x $j$ kolom, yang digunakan untuk mengukur hubungan antar variabel kategorik dalam tabel.
@@ -46,11 +42,11 @@ Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk
 
 -   Odds adalah peluang terjadinya suatu kejadian dibandingkan peluang tidak terjadinya kejadian.
 
--   $Odds = \frac{p}{(1−𝑝)}$
+-   $Odds = \frac{p}{(1-p)}$
 
 -   Rasio odds adalah perbandingan dari dua odds atau ukuran untuk mengetahui seberapa mungkin suatu kejadian terjadi di salah satu kelompok dibandingkan kelompok lain.
 
--   Rasio Odds = (𝑜𝑑𝑑𝑠 𝑘𝑒𝑙𝑜𝑚𝑝𝑜𝑘 1) / (𝑜𝑑𝑑𝑠 𝑘𝑒𝑙𝑜𝑚𝑝𝑜𝑘 2)
+-   $Rasio \ Odds = \frac{(odds kelompok 1)}{(odds kelompok 2)}$
 
 -   Rasio Odds = 1, maka tidak ada hubungan antara dua kelompok
 
@@ -62,7 +58,7 @@ Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk
 
 -   Resiko relatif adalah perbandingan resiko kejadian dari dua kelompok atau perbandingan peluang sukses dari dua kelompok.
 
--   $RR = \frac{Peluang \ sukses \ kelompok \ 1} {𝑃𝑒𝑙𝑢𝑎𝑛𝑔 \ 𝑠𝑢𝑘𝑠s \ 𝑘𝑒𝑙𝑜𝑚𝑝𝑜k \ 2}$
+-   $RR = \frac{Peluang \ sukses \ kelompok \ 1} {Peluang \ sukses \ kelompok \ 2}$
 
 -   RR = 1, maka peluang sukses antar kelompok sama
 
