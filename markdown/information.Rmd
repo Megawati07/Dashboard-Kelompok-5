@@ -15,7 +15,7 @@ runtime: shiny
 -   $i$ baris menyatakan kategori dari variabel A dan $j$ kolom menyatakan kategori dari variabel B.
 
 - Berikut adalah struktur dari tabel kontingensi:
-![](/Users/hasna/OneDrive/Pictures/struktur_tblkon.png)
+![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/struktur_tblkon.png)
 - Contoh tabel kontingensi:
 
   Terdapat dua variabel kategorik, yaitu variabel Kategori   Karies dan Jenis   Kelamin. Kategori Karies terdiri dari   kategori Tidak Karies dan Karies,    sedangkan Jenis       Kelamin terdiri dari kategori Perempuan dan Laki-Laki.
