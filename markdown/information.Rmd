@@ -24,7 +24,8 @@ runtime: shiny
     
 <center>![](https://raw.githubusercontent.com/Megawati07/Dashboard-Kelompok-5/main/markdown/tabel_kontingensi2.png)<center>
 
-    **Contoh cara membaca tabel kontingensi:** Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
+    **Contoh cara membaca tabel kontingensi:** 
+Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
 
 ### Uji Asosiasi dengan Khi-Kuadrat
 
