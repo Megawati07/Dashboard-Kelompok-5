@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Contoh tabel kontingensi:
 
   Terdapat dua variabel kategorik, yaitu variabel Kategori   Karies dan Jenis   Kelamin. Kategori Karies terdiri dari   kategori Tidak Karies dan Karies,    sedangkan Jenis       Kelamin terdiri dari kategori Perempuan dan Laki-Laki.
-![](/Users/hasna/OneDrive/Pictures/tabel_kontingensi2.png)
+![](/markdown/tabel_kontingensi2.png)
 
   **Contoh cara membaca tabel kontingensi:**
 Jenis kelamin Perempuan yang Tidak Karies ada sebanyak 11 orang, sedangkan untuk jenis kelamin Perempuan yang Karies ada sebanyak 17 orang dan total dari jenis kelamin Perempuan (Tidak Karies dan Karies) ada sebanyak 28 orang.
