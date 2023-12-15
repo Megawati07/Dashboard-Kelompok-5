@@ -37,6 +37,8 @@ Ukuran asosiasi yang digunakan akan tergantung pada jenis asosiasi yang ingin di
 
 Berikut merupakan link untuk shinnyapps atau dashboard dari project kami:
 
+https://rismandwij.shinyapps.io/AsosiasiDuaPeubahKategorik/
+
 ## :blue_book: Dokumentasi 
 
 ## Penjelasan singkat masing-masing library yang digunakan:
