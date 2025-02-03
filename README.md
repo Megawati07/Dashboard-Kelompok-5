@@ -92,8 +92,8 @@ https://rismandwij.shinyapps.io/AsosiasiDuaPeubahKategorik/
 3. Alfa Nugraha Pradana, S.Komp
 ### Kelompok Mahasiswa :
 1. L.M Risman Dwi Jumansyah S.Stat (G1501222058)
-2. Ainun Salsabila, S.Stat (G1501222038)
-3. Megawati, S.Si (G1501221026)
+2. Megawati, S.Si (G1501221026)
+3. Ainun Salsabila, S.Stat (G1501222038)
 
 
 
